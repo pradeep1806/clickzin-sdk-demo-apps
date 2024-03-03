@@ -13,6 +13,7 @@ android {
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
+        multiDexEnabled = true
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         vectorDrawables {
@@ -62,6 +63,9 @@ dependencies {
     // ---- Clickzin ------- //
     implementation(libs.clickzin.tracking)
     implementation(libs.gson)
+    implementation(libs.install.referrer)
+    implementation(libs.multidex)
+
     // ---- Clickzin ------- //
 
     testImplementation(libs.junit)

@@ -29,12 +29,14 @@ repository 'Google' was added by build file 'build.gradle' in settings.gradle,
 
     clickzin-tracking = { group = "com.clickzin.android", name = "tracking", version = "1.0.0" }
     gson = { group = "com.google.code.gson", name = "gson", version = "2.10.1" }
+install-referrer = { group = "com.android.installreferrer", name = "installreferrer", version = "2.2" }
 
 # Step 2.1 : add below dependencies in app/build.gradle.kts.
 
     // ---- Clickzin ------- //
     implementation(libs.clickzin.tracking)
     implementation(libs.gson)
+    implementation(libs.install.referrer)
     // ---- Clickzin ------- //
 
 # Step 3: In AndroidManifest.xml,add below permissions if not added.
