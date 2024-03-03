@@ -16,6 +16,9 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url = uri("https://mymavenrepo.com/repo/gap8CjauTS8VrUs57tgf/")
+        }
     }
 }
 
