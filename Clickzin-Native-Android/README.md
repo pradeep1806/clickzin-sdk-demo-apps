@@ -81,11 +81,11 @@ repository 'Google' was added by build file 'build.gradle' in settings.gradle,
 
     // Step 6 : Clickzin changes starts here
     // keyword 'register' should be same as configured in panel.
-    // // clickzinTracker.trackEvent('register') // Without callback on conversion tracked.
-    // // or
-    // clickzinTracker.trackEvent('register'){ uid, source, eventId ->
-    //  Log.d("tag", "On conversion tracked $uid $source $eventId")
-    // } // with callback on conversion tracked.
+    // clickzinTracker.trackEvent('register') // Without callback on conversion tracked.
+    // or
+    clickzinTracker.trackEvent('register'){ uid, source, eventId ->
+      Log.d("tag", "On conversion tracked $uid $source $eventId")
+     } // with callback on conversion tracked.
     // Step 6 : Clickzin changes ends starts here
 
 # Step 7 : If you are using progaurd, add below line
