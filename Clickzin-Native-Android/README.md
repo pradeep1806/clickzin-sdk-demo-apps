@@ -24,7 +24,7 @@ repository 'Google' was added by build file 'build.gradle' in settings.gradle,
 
 # Step 2 : In app build.gradle under dependencies add
 
-    implementation 'com.clickzin.android:tracking:1.0.2'
+    implementation 'com.clickzin.android:tracking:1.0.4'
     implementation 'com.google.code.gson:gson:2.10.1'
     implementation 'com.android.installreferrer:installreferrer:2.2'
 
@@ -59,6 +59,8 @@ repository 'Google' was added by build file 'build.gradle' in settings.gradle,
             // Step 5 : Clickzin changes starts here
             startTracking()
             // Step 5 : Clickzin changes ends starts here
+
+
     }
 
     // Step 5 : Clickzin changes starts here
@@ -67,7 +69,11 @@ repository 'Google' was added by build file 'build.gradle' in settings.gradle,
     private fun startTracking() {
         val appKey = "As provided by your Digital Marketing team."
         clickzinTracker = ClickzinTracker(this@MainActivity, appKey)
-        clickzinTracker.startTracking()
+        clickzinTracker.startTracking() // Without callback on conversion tracked.
+            
+        clickzinTracker.startTracking(){ uid, source, eventId ->
+                Log.d("tag", "On conversion tracked $uid $source $eventId")
+        } // with callback on conversion tracked.
     }
     // Step 5 : Clickzin changes ends starts here
 

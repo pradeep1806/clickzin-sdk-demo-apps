@@ -1,6 +1,7 @@
 package com.clickzin.androidnativedemoapp
 
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.clickable
@@ -20,7 +21,10 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
 
         clickzinTracker = ClickzinTracker(this@MainActivity, "Key Provided By Your Admin")
-        clickzinTracker.startTracking()
+        // clickzinTracker.startTracking() // To be used if no callback on conversion tracked is needed.
+        clickzinTracker.startTracking { uid, source, eventId ->
+            Log.d("tag", "\"On conversion tracked $uid $source $eventId")
+        }
         setContent {
             ClickzinAndroidNativeDemoAppTheme {
                 // A surface container using the 'background' color from the theme
@@ -42,7 +46,12 @@ fun Greeting(name: String, clickzinTracker: ClickzinTracker, modifier: Modifier 
     Text(
         text = "Test $name",
         modifier = modifier.clickable {
-            clickzinTracker.trackEvent("Register")
+            // clickzinTracker.trackEvent("register") // To be used if no callback on conversion tracked is needed.
+
+            // To be used when conversion tracking callback is needed.
+            clickzinTracker.trackEvent("register") { uid, source, eventId ->
+                Log.d("tag", "\"On conversion tracked $uid $source $eventId")
+            }
         }
     )
 }
