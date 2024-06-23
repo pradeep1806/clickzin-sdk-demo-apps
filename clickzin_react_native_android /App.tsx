@@ -43,7 +43,7 @@ function App(): React.JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
-  const changeMessage = async () => {
+  const trackEvent = async () => {
     //setMessage('You pressed the button!');
 
     try {
@@ -71,7 +71,7 @@ function App(): React.JSX.Element {
             Welcome to Clickzin React Native Demo App to test tracking
           </Text>
 
-          <Button title="Track Register Event" onPress={changeMessage} />
+          <Button title="Track Register Event" onPress={trackEvent} />
         </View>
       </ScrollView>
     </SafeAreaView>
