@@ -39,9 +39,9 @@ public class ClickzinInstallReferrerModule extends ReactContextBaseJavaModule {
                     case InstallReferrerClient.InstallReferrerResponse.OK:
                         try {
                             ReferrerDetails response = referrerClient.getInstallReferrer();
-                            //String referrerUrl = response.getInstallReferrer();
+                            String referrerUrl = response.getInstallReferrer();
                             // Mocking: 
-                            String referrerUrl="utm_source=clickzin&utm_medium=test&utm_term=testing&utm_content=content&utm_campaign=12&utm_uid=asdfasdfisadf&utm_network=231&utm_refer=asdfasdf";
+                            //String referrerUrl="utm_source=clickzin&utm_medium=test&utm_term=testing&utm_content=content&utm_campaign=12&utm_uid=asdfasdfisadf&utm_network=231&utm_refer=asdfasdf";
 
                             Log.d("Clickzin"," InstallReferrerModule referrerUrl " + referrerUrl);
                             double clickTimestamp = (double) response.getReferrerClickTimestampSeconds();
