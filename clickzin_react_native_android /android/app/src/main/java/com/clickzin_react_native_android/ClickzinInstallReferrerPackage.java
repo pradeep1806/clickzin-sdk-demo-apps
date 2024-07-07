@@ -10,20 +10,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class InstallReferrerPackage implements ReactPackage {
+public class ClickzinInstallReferrerPackage implements ReactPackage {
 
     @Override
     public List<NativeModule> createNativeModules(ReactApplicationContext reactContext) {
         List<NativeModule> modules = new ArrayList<>();
-        modules.add(new InstallReferrerModule(reactContext));
+        modules.add(new ClickzinInstallReferrerModule(reactContext));
         return modules;
     }
-
-    // Uncomment this for older versions of react.
-    // @Override
-    // public List<Class<? extends JavaScriptModule>> createJSModules() {
-    //     return Collections.emptyList();
-    // }
 
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {

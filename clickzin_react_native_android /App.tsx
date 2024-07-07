@@ -6,7 +6,7 @@
  */
 
 import React, {useEffect} from 'react';
-import ClickzinTracking from 'clickzin_tracking_react_native';
+import ClickzinTrackingSdk from 'clickzin_tracking_react_native';
 
 import {
   Button,
@@ -27,8 +27,11 @@ function App(): React.JSX.Element {
   useEffect(() => {
     async function trackInstall() {
       try {
-        const response = await ClickzinTracking.trackInstall(
-          '17d00f2b-208a-4f7e-aa82-7e5b82fd918d',
+        const response = await ClickzinTrackingSdk.trackInstall(
+          'api key',
+          () => {
+            console.log('Clickzin On Conversion tracked : ');
+          },
         );
         console.log('Clickzin Response : ', response);
       } catch (error) {
@@ -44,12 +47,13 @@ function App(): React.JSX.Element {
   };
 
   const trackEvent = async () => {
-    //setMessage('You pressed the button!');
-
     try {
-      const response = await ClickzinTracking.trackEvent(
-        '17d00f2b-208a-4f7e-aa82-7e5b82fd918d',
+      const response = await ClickzinTrackingSdk.trackEvent(
+        'api key',
         'register',
+        () => {
+          console.log('Clickzin On Conversion tracked : ');
+        },
       );
       console.log('Clickzin event response : ', response);
     } catch (error) {

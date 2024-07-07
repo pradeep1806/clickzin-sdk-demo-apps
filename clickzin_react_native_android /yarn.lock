@@ -2101,10 +2101,10 @@ cli-cursor@^3.1.0:
 cli-spinners@^2.5.0:
   version "2.9.2"
 
-clickzin_tracking_react_native@1.0.6:
-  version "1.0.6"
-  resolved "https://registry.npmjs.org/clickzin_tracking_react_native/-/clickzin_tracking_react_native-1.0.6.tgz"
-  integrity sha512-uMUx/U+psPlu48cnlRkhn1vT+g+5H7XScQ3uRupcy1X8eYe6R4mZQjjHUm01OhUQrBidkgx4m3tXBhUoZUkfUw==
+clickzin_tracking_react_native@^1.0.23:
+  version "1.0.23"
+  resolved "https://registry.npmjs.org/clickzin_tracking_react_native/-/clickzin_tracking_react_native-1.0.23.tgz"
+  integrity sha512-+rw32l7Hxoag6ur6P+S7/o6drvbWsRFsa4fG2soVTN5MrXDP7x7ZPyag84uxNNsWpKdaKwvouvgWTWLNf3jzNw==
   dependencies:
     "@react-native-async-storage/async-storage" "^1.23.1"
 

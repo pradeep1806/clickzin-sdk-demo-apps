@@ -13,23 +13,24 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import android.util.Log;
 
-public class InstallReferrerModule extends ReactContextBaseJavaModule {
+public class ClickzinInstallReferrerModule extends ReactContextBaseJavaModule {
 
-
-private static final String TAG = "InstallReferrerModule";
+    private static final String TAG = "ClickzinInstallReferrerModule";
     private InstallReferrerClient referrerClient;
 
-    public InstallReferrerModule(ReactApplicationContext reactContext) {
+    public ClickzinInstallReferrerModule(ReactApplicationContext reactContext) {
         super(reactContext);
     }
 
     @Override
     public String getName() {
-        return "InstallReferrer";
+        return "ClickzinInstallReferrerModule";
     }
 
     @ReactMethod
     public void getInstallReferrer(final Callback callback) {
+        Log.d("ClickzinInstallReferrerModule"," getInstallReferrer ");
+
         referrerClient = InstallReferrerClient.newBuilder(getReactApplicationContext()).build();
         referrerClient.startConnection(new InstallReferrerStateListener() {
             @Override
@@ -50,7 +51,7 @@ private static final String TAG = "InstallReferrerModule";
 
                             callback.invoke(null, referrerUrl, clickTimestamp, installTimestamp);
                         } catch (Exception e) {
-                             Log.d("Clickzin"," InstallReferrerModule Exception " + e);
+                            Log.d("Clickzin"," InstallReferrerModule Exception " + e);
                             callback.invoke(e.getMessage(),null,null,null);
                         }
                         break;
