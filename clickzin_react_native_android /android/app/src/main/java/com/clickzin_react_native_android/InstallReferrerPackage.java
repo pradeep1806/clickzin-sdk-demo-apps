@@ -1,4 +1,4 @@
-package com.clickzintracking;
+package com.clickzin_react_native_android;
 
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;

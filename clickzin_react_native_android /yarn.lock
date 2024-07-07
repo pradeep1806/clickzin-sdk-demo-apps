@@ -2101,10 +2101,10 @@ cli-cursor@^3.1.0:
 cli-spinners@^2.5.0:
   version "2.9.2"
 
-clickzin_tracking_react_native@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.npmjs.org/clickzin_tracking_react_native/-/clickzin_tracking_react_native-0.2.2.tgz"
-  integrity sha512-0bpzkWzjv2a9Aiz2fL5g3smgO20T/qk5V7OkIcd7TUjD7ky2EdFVpe7mpFcsguvcopnfwzvmrKrfkNRywPhZ3g==
+clickzin_tracking_react_native@1.0.6:
+  version "1.0.6"
+  resolved "https://registry.npmjs.org/clickzin_tracking_react_native/-/clickzin_tracking_react_native-1.0.6.tgz"
+  integrity sha512-uMUx/U+psPlu48cnlRkhn1vT+g+5H7XScQ3uRupcy1X8eYe6R4mZQjjHUm01OhUQrBidkgx4m3tXBhUoZUkfUw==
   dependencies:
     "@react-native-async-storage/async-storage" "^1.23.1"
 
@@ -4298,7 +4298,7 @@ react-is@^16.13.1:
 react-is@^17.0.1:
   version "17.0.2"
 
-react-native@*, "react-native@^0.0.0-0 || >=0.60 <1.0", react-native@>=0.60.0, react-native@0.74.2:
+react-native@*, "react-native@^0.0.0-0 || >=0.60 <1.0", react-native@^0.74.3, react-native@0.74.2:
   version "0.74.2"
   dependencies:
     "@jest/create-cache-key-function" "^29.6.3"
@@ -4355,7 +4355,7 @@ react-test-renderer@18.2.0:
     react-shallow-renderer "^16.15.0"
     scheduler "^0.23.0"
 
-react@*, "react@^16.0.0 || ^17.0.0 || ^18.0.0", react@^18.2.0, react@>=16.8.0, react@18.2.0:
+react@*, "react@^16.0.0 || ^17.0.0 || ^18.0.0", react@^18.2.0, react@18.2.0:
   version "18.2.0"
   dependencies:
     loose-envify "^1.1.0"

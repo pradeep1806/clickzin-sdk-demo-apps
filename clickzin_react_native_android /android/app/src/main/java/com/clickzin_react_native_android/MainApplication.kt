@@ -1,7 +1,7 @@
 package com.clickzin_react_native_android
 
 
-import com.clickzintracking.InstallReferrerPackage;
+import com.clickzin_react_native_android.InstallReferrerPackage;
 import android.app.Application
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
