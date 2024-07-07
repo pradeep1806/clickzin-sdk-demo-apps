@@ -1,7 +1,7 @@
 package com.clickzin_react_native_android
 
 
-import com.clickzin_react_native_android.InstallReferrerPackage;
+import com.clickzin_react_native_android.ClickzinInstallReferrerPackage;
 import android.app.Application
 import com.facebook.react.PackageList
 import com.facebook.react.ReactApplication
@@ -20,7 +20,7 @@ class MainApplication : Application(), ReactApplication {
         override fun getPackages(): List<ReactPackage> =
             PackageList(this).packages.apply {
               // Packages that cannot be autolinked yet can be added manually here, for example:
-              add(InstallReferrerPackage())
+              add(ClickzinInstallReferrerPackage())
             }
 
         override fun getJSMainModuleName(): String = "index"
